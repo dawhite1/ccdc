@@ -1,0 +1,16 @@
+#!/bin/sh
+
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
+do
+  while IFS=: read -r g1 g2 g3 g4
+  do
+    if [ $f4 -eq $g3 ]
+    then
+      if [ -z "$g4" ]
+      then
+        g4="none"
+      fi
+      echo -e "User: $f1\tGroup: $g4\tShell: $f7\tDirectory: $f6"
+    fi
+  done < /etc/group
+done < /etc/passwd

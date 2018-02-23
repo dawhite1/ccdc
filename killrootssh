@@ -1,0 +1,12 @@
+#!/bin/sh
+
+correctPRL="PermitRootLogin no"
+
+prl=$(cat /etc/ssh/sshd_config | grep -m 1 PermitRootLogin)
+echo $prl
+
+if [ "$correctPRL" != "$prl" ]
+then
+  echo $correctPRL >> /etc/ssh/sshd_config
+  echo "SSH: 'PermitRootLogin no' has been appended"
+fi
