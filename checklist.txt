@@ -1,0 +1,28 @@
+1
+  get MAC
+
+2
+  create ssh user
+  logout/in as ssh user
+
+3
+  /etc/ssh/sshd_config --> PermitRootLogin no
+
+4
+  sandbox shells by editing .bashrc
+  a) edit .bashrc
+  b) create or modify .bash_profile to point to .bashrc
+  c) delete or create empty .profile
+  d) make aliases for common commands
+
+5
+  change all user passwords
+  remove unnecessary/suspicious users
+  disable root access
+
+6
+  check crontab, history, /var/logs
+  check /etc/hosts, hosts.allow, hosts.deny, dhcpcd.conf
+
+7
+  install/run lynis, rkhunter, nikto
