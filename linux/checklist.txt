@@ -26,3 +26,8 @@
 
 7
   install/run lynis, rkhunter, nikto
+
+8
+  handle immutable files:
+  $ find <dir> | xargs -I file lsattr -a file 2>/dev/null | grep '^....i'
+  $ chattr -i file
