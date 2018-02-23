@@ -1,0 +1,2 @@
+https://cwe.mitre.org/
+https://cve.mitre.org/
