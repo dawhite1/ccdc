@@ -11,7 +11,7 @@ def get(randstring, size):
         number = random.choice(string.digits)
         symbol = random.choice(string.punctuation)
         pick = random.choice(set)
-        if pick:
+        if pick == 0:
             char = letter
         elif pick == 1:
             char = number
